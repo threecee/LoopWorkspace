@@ -27,3 +27,4 @@ xcuserdata/
 *.playground
 playground.xcworkspace
 timeline.xctimeline
+.b1-*.txt
