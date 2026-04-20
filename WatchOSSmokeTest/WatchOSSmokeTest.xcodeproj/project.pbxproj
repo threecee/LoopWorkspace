@@ -44,6 +44,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C3034A822F96CC9000EF46CE /* LoopKit.framework in Embed Frameworks */,
+				C3034A852F96CCA800EF46CE /* OmniBLE.framework in Embed Frameworks */,
+				C3034A8B2F96CCDE00EF46CE /* G7SensorKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +132,6 @@
 				C3034A5E2F96CC2800EF46CE /* Resources */,
 				C3034A762F96CC2900EF46CE /* Embed Watch Content */,
 				C3034A7E2F96CC8300EF46CE /* Frameworks */,
-				C3034A7F2F96CC8300EF46CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +152,7 @@
 				C3034A622F96CC2800EF46CE /* Sources */,
 				C3034A632F96CC2800EF46CE /* Frameworks */,
 				C3034A642F96CC2800EF46CE /* Resources */,
+				C3034A7F2F96CC8300EF46CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
