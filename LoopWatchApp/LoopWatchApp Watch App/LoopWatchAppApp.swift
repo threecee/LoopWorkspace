@@ -3,6 +3,7 @@ import WatchKit
 
 @main
 struct LoopWatchAppApp: App {
+    @WKApplicationDelegateAdaptor private var appDelegate: AppDelegate
     @Environment(\.scenePhase) private var scenePhase
     @StateObject private var viewModel = GlucoseViewModel()
     private let reader = GlucoseReader()
@@ -56,6 +57,37 @@ struct LoopWatchAppApp: App {
             try? cache.append(reading)
             do { try await writer.write(reading) }
             catch { /* log-only for now; auth rejection is the main failure mode */ }
+        }
+    }
+}
+
+/// Handles watchOS background-refresh tasks. `G7CGMManager` maintains its own
+/// BLE connection in background (via the `bluetooth-central` background mode);
+/// our job in `handle(_:)` is mainly to re-schedule the next refresh wake-up so
+/// the OS keeps us alive if BLE delivery lapses.
+final class AppDelegate: NSObject, WKApplicationDelegate {
+    func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
+        for task in backgroundTasks {
+            if let refreshTask = task as? WKApplicationRefreshBackgroundTask {
+                scheduleNextRefresh()
+                refreshTask.setTaskCompletedWithSnapshot(false)
+            } else {
+                task.setTaskCompletedWithSnapshot(false)
+            }
+        }
+    }
+
+    func applicationDidFinishLaunching() {
+        scheduleNextRefresh()
+    }
+
+    private func scheduleNextRefresh() {
+        let next = Date().addingTimeInterval(10 * 60)
+        WKApplication.shared().scheduleBackgroundRefresh(
+            withPreferredDate: next,
+            userInfo: nil
+        ) { error in
+            if let error { NSLog("scheduleBackgroundRefresh error: \(error)") }
         }
     }
 }
