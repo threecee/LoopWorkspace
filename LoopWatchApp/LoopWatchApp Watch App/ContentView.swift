@@ -27,6 +27,10 @@ struct ContentView: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
+                // B.2.c: phone↔watch connection visibility.
+                Text(viewModel.phoneConnected ? "Phone: connected" : "Phone: out of range")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)

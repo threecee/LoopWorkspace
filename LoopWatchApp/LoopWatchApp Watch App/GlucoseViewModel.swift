@@ -7,6 +7,8 @@ final class GlucoseViewModel: ObservableObject {
     @Published var latest: GlucoseReading?
     @Published var recent: [GlucoseReading] = []
     @Published var statusMessage: String = "Waiting for sensor…"
+    /// B.2.c: phone↔watch connection visibility on the watch face.
+    @Published var phoneConnected: Bool = false
 
     func ingest(_ reading: GlucoseReading) {
         latest = reading

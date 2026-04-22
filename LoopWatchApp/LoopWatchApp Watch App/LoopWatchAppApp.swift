@@ -1,5 +1,6 @@
 import SwiftUI
 import WatchKit
+import Combine
 
 @main
 struct LoopWatchAppApp: App {
@@ -9,6 +10,12 @@ struct LoopWatchAppApp: App {
     private let reader = GlucoseReader()
     private let writer = HealthKitWriter()
     private let runtime = ExtendedRuntimeCoordinator()
+
+    // B.2.c: phone↔watch coordinator. Stored as a property so its lifetime
+    // matches the App's. Wired into viewModel.phoneConnected via a Combine
+    // sink in `bootstrap()`.
+    @State private var phoneWatchCoordinator: PhoneWatchSessionCoordinator?
+    @State private var phoneWatchCancellables = Set<AnyCancellable>()
 
     // App Group identifier — must match Loop iOS's App Group. Stand-in value
     // per user instruction for B.2.a; real Loop iOS bundle may differ. If so,
@@ -26,6 +33,24 @@ struct LoopWatchAppApp: App {
     }
 
     private func bootstrap() async {
+        // B.2.c: start phone↔watch coordinator and wire its isConnected state
+        // into viewModel.phoneConnected. Done first — independent of G7
+        // bootstrap, so the phone-connection subtitle surfaces even before
+        // the sensor handshake.
+        await MainActor.run {
+            let coordinator = PhoneWatchSessionCoordinator(
+                transport: WCSessionPhoneWatchTransport()
+            )
+            coordinator.$lastHeartbeatReceivedAt
+                .receive(on: DispatchQueue.main)
+                .sink { _ in
+                    viewModel.phoneConnected = coordinator.isConnected
+                }
+                .store(in: &phoneWatchCancellables)
+            coordinator.start()
+            phoneWatchCoordinator = coordinator
+        }
+
         // 1. HealthKit auth
         do { try await writer.requestAuthorization() }
         catch {
