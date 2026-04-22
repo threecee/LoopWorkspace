@@ -12,6 +12,8 @@
 		C33D3D832F97F88200305897 /* G7SensorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D812F97F88200305897 /* G7SensorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C33D3D862F97F88C00305897 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D852F97F88C00305897 /* LoopKit.framework */; };
 		C33D3D872F97F88C00305897 /* LoopKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D852F97F88C00305897 /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2C0E00000000000040 /* OmniBLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C0E00000000000041 /* OmniBLE.framework */; };
+		B2C0E00000000000042 /* OmniBLE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2C0E00000000000041 /* OmniBLE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 			files = (
 				C33D3D832F97F88200305897 /* G7SensorKit.framework in Embed Frameworks */,
 				C33D3D872F97F88C00305897 /* LoopKit.framework in Embed Frameworks */,
+				B2C0E00000000000042 /* OmniBLE.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		C33D3D602F97F5D600305897 /* LoopWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoopWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33D3D812F97F88200305897 /* G7SensorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = G7SensorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33D3D852F97F88C00305897 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C0E00000000000041 /* OmniBLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OmniBLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D100000000000000000000B1 /* LoopWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoopWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,7 @@
 			files = (
 				C33D3D822F97F88200305897 /* G7SensorKit.framework in Frameworks */,
 				C33D3D862F97F88C00305897 /* LoopKit.framework in Frameworks */,
+				B2C0E00000000000040 /* OmniBLE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +141,7 @@
 			children = (
 				C33D3D852F97F88C00305897 /* LoopKit.framework */,
 				C33D3D812F97F88200305897 /* G7SensorKit.framework */,
+				B2C0E00000000000041 /* OmniBLE.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
