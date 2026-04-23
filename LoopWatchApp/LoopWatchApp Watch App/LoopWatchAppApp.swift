@@ -1,6 +1,7 @@
 import SwiftUI
 import WatchKit
 import Combine
+import OmniBLE
 
 @main
 struct LoopWatchAppApp: App {
@@ -16,6 +17,11 @@ struct LoopWatchAppApp: App {
     // sink in `bootstrap()`.
     @State private var phoneWatchCoordinator: PhoneWatchSessionCoordinator?
     @State private var phoneWatchCancellables = Set<AnyCancellable>()
+
+    // B.2.d: bonding-handoff orchestrator. Lifetime matches App's. Wired into
+    // viewModel.handoffState via a Combine sink in `bootstrap()`.
+    @State private var handoffOrchestrator: HandoffOrchestrator?
+    @State private var handoffCancellables = Set<AnyCancellable>()
 
     // App Group identifier — must match Loop iOS's App Group. Stand-in value
     // per user instruction for B.2.a; real Loop iOS bundle may differ. If so,
@@ -49,6 +55,32 @@ struct LoopWatchAppApp: App {
                 .store(in: &phoneWatchCancellables)
             coordinator.start()
             phoneWatchCoordinator = coordinator
+
+            // B.2.d: instantiate handoff orchestrator + policy + scheduler.
+            let settings = HandoffSettings.load(
+                from: UserDefaults(suiteName: HandoffSettings.appGroupIdentifier)
+                    ?? .standard)
+            let machine = HandoffStateMachine(initialState: .phoneDriver, role: .watch)
+            let policy = HandoffPolicyEngine(
+                coordinator: coordinator,
+                settings: settings,
+                emit: { _ in /* wired below via orchestrator's start() */ }
+            )
+            let scheduler = ShadowStateScheduler(fire: { /* set by orchestrator */ })
+            let orchestrator = HandoffOrchestrator(
+                coordinator: coordinator,
+                stateMachine: machine,
+                policyEngine: policy,
+                shadowScheduler: scheduler
+            )
+            orchestrator.$handoffState
+                .receive(on: DispatchQueue.main)
+                .sink { newState in
+                    viewModel.handoffState = newState
+                }
+                .store(in: &handoffCancellables)
+            orchestrator.start()
+            handoffOrchestrator = orchestrator
         }
 
         // 1. HealthKit auth

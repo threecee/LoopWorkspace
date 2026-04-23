@@ -6,6 +6,9 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 6) {
+                // B.2.d: ownership badge reflecting handoff state.
+                HandoffOwnershipBadge(state: viewModel.handoffState)
+                    .padding(.bottom, 4)
                 if let reading = viewModel.latest {
                     Text("\(Int(reading.valueMgDl))")
                         .font(.system(size: 42, weight: .bold))
