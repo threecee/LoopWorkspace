@@ -22,6 +22,20 @@ final class PhoneWatchSessionCoordinator: ObservableObject {
     private let clock: () -> Date
     private var heartbeat: HeartbeatScheduler?
 
+    /// B.2.d: orchestrator subscribes to incoming non-heartbeat messages
+    /// (modeSwitch / pairingHandoff). The coordinator continues to handle
+    /// heartbeat internally; modeSwitch / pairingHandoff are forwarded.
+    var onHandoffMessage: ((PhoneWatchMessage) -> Void)?
+
+    /// B.2.d: convenience reachability for HandoffPolicyEngine. Mirrors the
+    /// underlying transport's WCSession reachability when known, else false.
+    var isReachable: Bool {
+        // isCounterpartReachable already tracks transport.isReachable updated
+        // on each sent heartbeat; surface as isReachable for orchestrator
+        // observation. When no heartbeat has been sent yet, defaults to false.
+        return isCounterpartReachable
+    }
+
     /// "Connected" = we received a heartbeat within the last 90 seconds.
     var isConnected: Bool {
         guard let when = lastHeartbeatReceivedAt else { return false }
@@ -53,6 +67,16 @@ final class PhoneWatchSessionCoordinator: ObservableObject {
 
     // MARK: - Send
 
+    /// B.2.d: queue a mode-switch message (transferUserInfo, fire-and-forget).
+    func sendModeSwitch(_ ms: PhoneWatchModeSwitch) {
+        transport.queueMessage(.modeSwitch(ms))
+    }
+
+    /// B.2.d: queue a pairing-handoff message (transferUserInfo).
+    func sendPairingHandoff(_ ph: PhoneWatchPairingHandoff) {
+        transport.queueMessage(.pairingHandoff(ph))
+    }
+
     func sendHeartbeat() {
         let hb = PhoneWatchHeartbeat(
             protocolVersion: PhoneWatchProtocol.currentVersion,
@@ -75,12 +99,14 @@ final class PhoneWatchSessionCoordinator: ObservableObject {
             isCounterpartReachable = true
         case .modeSwitch(let ms):
             guard PhoneWatchProtocol.shouldAccept(incomingVersion: ms.protocolVersion) else { return }
-            // B.2.c: log-only stub. B.2.d will execute the transition.
             NSLog("PhoneWatchSessionCoordinator: received mode switch \(ms.targetMode.rawValue) (transition \(ms.transitionId))")
+            // B.2.d: forward to orchestrator (if subscribed).
+            onHandoffMessage?(message)
         case .pairingHandoff(let ph):
             guard PhoneWatchProtocol.shouldAccept(incomingVersion: ph.protocolVersion) else { return }
-            // B.2.c: log-only stub. B.2.d will persist and use the payload.
             NSLog("PhoneWatchSessionCoordinator: received pairing handoff for pod \(ph.podId) (\(ph.pairingPayload.count) bytes)")
+            // B.2.d: forward to orchestrator (if subscribed).
+            onHandoffMessage?(message)
         }
     }
 }
