@@ -34,10 +34,59 @@ extension HKHealthStore: HealthStoreProtocol {
     }
 }
 
-/// Writes glucose readings to HealthKit.
+/// Writes glucose readings to HealthKit, and requests broad read access so the
+/// watch app can later surface or relay all the health data the device tracks.
 struct HealthKitWriter {
     static let glucoseType = HKQuantityType(.bloodGlucose)
     static let mgDL = HKUnit(from: "mg/dL")
+
+    /// Types LoopWatchApp will write to HealthKit.
+    /// - `bloodGlucose`: G7 readings echoed from the watch (B.2.a).
+    /// - `insulinDelivery`: doses the watch commands once it owns the pump (B.2.e).
+    /// - `dietaryCarbohydrates`: future carb-entry UI on the watch.
+    /// Asking for all three up front avoids re-prompting later — HealthKit only
+    /// surfaces the permission sheet once per type, ever.
+    static let typesToShare: Set<HKSampleType> = [
+        HKQuantityType(.bloodGlucose),
+        HKQuantityType(.insulinDelivery),
+        HKQuantityType(.dietaryCarbohydrates),
+    ]
+
+    /// Types LoopWatchApp will read. Comprehensive on purpose: every signal Apple
+    /// Watch can surface plus the diabetes triad for read-back. Pulse / sleep /
+    /// activity feed the future C.3 dashboard pipeline.
+    static let typesToRead: Set<HKObjectType> = {
+        var set: Set<HKObjectType> = [
+            // Diabetes read-back
+            HKQuantityType(.bloodGlucose),
+            HKQuantityType(.insulinDelivery),
+            HKQuantityType(.dietaryCarbohydrates),
+            // Heart
+            HKQuantityType(.heartRate),
+            HKQuantityType(.restingHeartRate),
+            HKQuantityType(.heartRateVariabilitySDNN),
+            HKQuantityType(.oxygenSaturation),
+            // Activity
+            HKQuantityType(.activeEnergyBurned),
+            HKQuantityType(.basalEnergyBurned),
+            HKQuantityType(.appleExerciseTime),
+            HKQuantityType(.appleStandTime),
+            HKQuantityType(.stepCount),
+            HKQuantityType(.distanceWalkingRunning),
+            HKQuantityType(.flightsClimbed),
+            // Fitness
+            HKQuantityType(.vo2Max),
+            // Vitals
+            HKQuantityType(.respiratoryRate),
+            HKQuantityType(.bodyMass),
+            // Categorical
+            HKCategoryType(.sleepAnalysis),
+            HKCategoryType(.appleStandHour),
+            // Workouts
+            HKObjectType.workoutType(),
+        ]
+        return set
+    }()
 
     private let store: HealthStoreProtocol
 
@@ -45,10 +94,11 @@ struct HealthKitWriter {
         self.store = store
     }
 
-    /// Requests write authorization for blood glucose. Safe to call multiple times;
-    /// only prompts the user the first time.
+    /// Requests authorization for the full share + read set. Safe to call multiple
+    /// times; HealthKit only prompts the user once per type. Adding new types in
+    /// future versions will trigger a fresh prompt for just the additions.
     func requestAuthorization() async throws {
-        try await store.requestAuthorization(toShare: [Self.glucoseType], read: [Self.glucoseType])
+        try await store.requestAuthorization(toShare: Self.typesToShare, read: Self.typesToRead)
     }
 
     /// Writes a single glucose reading. The sensor ID is included in metadata

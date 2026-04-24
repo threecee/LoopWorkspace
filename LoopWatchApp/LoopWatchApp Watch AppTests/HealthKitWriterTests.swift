@@ -38,7 +38,17 @@ final class HealthKitWriterTests: XCTestCase {
         let writer = HealthKitWriter(store: store)
 
         try await writer.requestAuthorization()
-        XCTAssertEqual(store.requestedTypes.count, 1)
+
+        // Asserts the contract rather than the exact size of the set, so adding
+        // future write types doesn't break this test:
+        // - we always ask to share the diabetes triad
+        XCTAssertTrue(store.requestedTypes.contains(HKQuantityType(.bloodGlucose)))
+        XCTAssertTrue(store.requestedTypes.contains(HKQuantityType(.insulinDelivery)))
+        XCTAssertTrue(store.requestedTypes.contains(HKQuantityType(.dietaryCarbohydrates)))
+        // - and we ask to read at least the headline watch metrics
+        XCTAssertTrue(store.requestedReadTypes.contains(HKQuantityType(.heartRate)))
+        XCTAssertTrue(store.requestedReadTypes.contains(HKCategoryType(.sleepAnalysis)))
+        XCTAssertTrue(store.requestedReadTypes.contains(HKQuantityType(.activeEnergyBurned)))
     }
 }
 
@@ -46,6 +56,7 @@ final class HealthKitWriterTests: XCTestCase {
 final class MockHealthStore: HealthStoreProtocol {
     var savedSamples: [HKSample] = []
     var requestedTypes: Set<HKSampleType> = []
+    var requestedReadTypes: Set<HKObjectType> = []
     var saveResult: Result<Void, Error> = .success(())
     var authResult: Result<Void, Error> = .success(())
 
@@ -56,6 +67,7 @@ final class MockHealthStore: HealthStoreProtocol {
 
     func requestAuthorization(toShare: Set<HKSampleType>, read: Set<HKObjectType>) async throws {
         requestedTypes.formUnion(toShare)
+        requestedReadTypes.formUnion(read)
         try authResult.get()
     }
 }

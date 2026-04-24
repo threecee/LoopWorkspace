@@ -438,8 +438,8 @@
 				INFOPLIST_FILE = "LoopWatchApp-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = LoopWatchApp;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "LoopWatch uses Bluetooth to receive glucose readings from your Dexcom G7 sensor.";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "LoopWatch reads your glucose history from HealthKit to display recent trends.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LoopWatch writes glucose readings from your Dexcom G7 sensor to HealthKit.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LoopWatch reads your diabetes data (glucose, insulin, carbs) and the health metrics your Apple Watch tracks (heart rate, sleep, activity, workouts) so you and your caregivers can monitor your overall health alongside your loop.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LoopWatch writes glucose readings from your Dexcom G7 sensor, insulin doses commanded from the watch, and carb entries you log on the watch to HealthKit.";
 				INFOPLIST_KEY_UIBackgroundModes = "bluetooth-central";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -478,8 +478,8 @@
 				INFOPLIST_FILE = "LoopWatchApp-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = LoopWatchApp;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "LoopWatch uses Bluetooth to receive glucose readings from your Dexcom G7 sensor.";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "LoopWatch reads your glucose history from HealthKit to display recent trends.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LoopWatch writes glucose readings from your Dexcom G7 sensor to HealthKit.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LoopWatch reads your diabetes data (glucose, insulin, carbs) and the health metrics your Apple Watch tracks (heart rate, sleep, activity, workouts) so you and your caregivers can monitor your overall health alongside your loop.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LoopWatch writes glucose readings from your Dexcom G7 sensor, insulin doses commanded from the watch, and carb entries you log on the watch to HealthKit.";
 				INFOPLIST_KEY_UIBackgroundModes = "bluetooth-central";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
