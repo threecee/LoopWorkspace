@@ -1,5 +1,5 @@
 {
-  "originHash" : "7645108625333b4ec60e0e439db0c0dc8a91ad0942d36797c6b66208a9082ea2",
+  "originHash" : "ed4f1618549f47afc3dee37d9c1cf334972bf4a01b5565ef52ad2274e3307365",
   "pins" : [
     {
       "identity" : "amplitude-ios",
@@ -62,6 +62,15 @@
       "state" : {
         "revision" : "eee9ad754926c40a0f7e73f152357d37b119b7fa",
         "version" : "1.7.1"
+      }
+    },
+    {
+      "identity" : "ios-corebluetooth-mock",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NordicSemiconductor/IOS-CoreBluetooth-Mock.git",
+      "state" : {
+        "revision" : "500b23852e7d46b63ef8e2a826c2b6f3f6ed50ef",
+        "version" : "0.18.0"
       }
     },
     {
