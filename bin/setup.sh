@@ -6,7 +6,7 @@
 #   ASC_KEY_PATH, ASC_KEY_ID, ASC_KEY_ISSUER_ID
 #
 # What it does:
-#   1. Registers App Group group.com.threecee.loopGroup (idempotent)
+#   1. Registers App Group group.com.threecee.loop.LoopGroup (idempotent)
 #   2. Registers 7 App IDs under com.threecee.loop.* (idempotent)
 #   3. Prompts for capability assignment (web UI; API is finicky)
 #   4. Creates App Store Connect record "MyLoop With Watch" (idempotent)
@@ -26,7 +26,7 @@ API="$(dirname "$0")/asc-api.py"
 TEAM_ID="8YPHY526TJ"
 APP_NAME="MyLoop With Watch"
 MAIN_BUNDLE="com.threecee.loop"
-APP_GROUP="group.com.threecee.loopGroup"
+APP_GROUP="group.com.threecee.loop.LoopGroup"
 SKU="myloop-001"
 PRIVACY_URL="https://threecee.github.io/loop-privacy/"
 
@@ -125,7 +125,7 @@ echo "    https://developer.apple.com/account/resources/identifiers/list, click"
 echo "    into it and check the listed capabilities:"
 echo ""
 echo "    - $MAIN_BUNDLE:"
-echo "      HealthKit, App Groups (select group.com.threecee.loopGroup),"
+echo "      HealthKit, App Groups (select group.com.threecee.loop.LoopGroup),"
 echo "      Background Modes (Bluetooth Central + Background Fetch + Background Processing),"
 echo "      Push Notifications, Sign in with Apple, Siri, Time Sensitive Notifications,"
 echo "      Inter-App Audio"
