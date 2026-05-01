@@ -42,6 +42,48 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A91BAC1A22BC691A00ABF1BB"
+               BuildableName = "NightscoutServiceKit.framework"
+               BlueprintName = "NightscoutServiceKit"
+               ReferencedContainer = "container:NightscoutService/NightscoutService.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "84752E8126ED0FFE009FD801"
+               BuildableName = "OmniBLE.framework"
+               BlueprintName = "OmniBLE"
+               ReferencedContainer = "container:OmniBLE/OmniBLE.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C17F50C5291EAC3800555EB5"
+               BuildableName = "G7SensorKit.framework"
+               BlueprintName = "G7SensorKit"
+               ReferencedContainer = "container:G7SensorKit/G7SensorKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "43BA7153201E484D0058961E"
                BuildableName = "LoopKitUI.framework"
                BlueprintName = "LoopKitUI"
