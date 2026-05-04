@@ -33,3 +33,6 @@ timeline.xctimeline
 build/
 *.xcarchive
 
+## Claude Code session state
+.claude/
+
