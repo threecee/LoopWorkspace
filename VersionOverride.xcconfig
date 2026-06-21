@@ -2,11 +2,11 @@
 //  VersionOverride.xcconfig
 //  LoopWorkspace
 //
-//  Created 3/31/2025
-//  Copyright © 2020 LoopKit Authors. All rights reserved.
+//  D.1b: MyLoop With Watch starting version. Edit LOOP_MARKETING_VERSION
+//  manually for new release versions (1.0, 1.1, 2.0...).
+//  CURRENT_PROJECT_VERSION is overridden at build time by bin/release.sh
+//  (set to git commit count of the LoopWorkspace repo).
 //
 
-// Version [for DIY Loop]
-//   configure the version number in LoopWorkspace
-LOOP_MARKETING_VERSION = 3.12.1
-CURRENT_PROJECT_VERSION = 57
+LOOP_MARKETING_VERSION = 1.0
+CURRENT_PROJECT_VERSION = 1

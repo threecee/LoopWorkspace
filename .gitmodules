@@ -1,9 +1,9 @@
 [submodule "Loop"]
 	path = Loop
-	url = https://github.com/LoopKit/Loop.git
+	url = https://github.com/threecee/Loop.git
 [submodule "LoopKit"]
 	path = LoopKit
-	url = https://github.com/LoopKit/LoopKit.git
+	url = https://github.com/threecee/LoopKit.git
 [submodule "CGMBLEKit"]
 	path = CGMBLEKit
 	url = https://github.com/LoopKit/CGMBLEKit.git
@@ -33,7 +33,7 @@
 	url = https://github.com/LoopKit/LogglyService.git
 [submodule "OmniBLE"]
 	path = OmniBLE
-	url = https://github.com/LoopKit/OmniBLE.git
+	url = https://github.com/threecee/OmniBLE.git
 [submodule "NightscoutRemoteCGM"]
 	path = NightscoutRemoteCGM
 	url = https://github.com/LoopKit/NightscoutRemoteCGM.git
@@ -42,7 +42,7 @@
 	url = https://github.com/LoopKit/LoopSupport
 [submodule "G7SensorKit"]
 	path = G7SensorKit
-	url = https://github.com/LoopKit/G7SensorKit.git
+	url = https://github.com/threecee/G7SensorKit.git
 [submodule "TidepoolService"]
 	path = TidepoolService
 	url = https://github.com/LoopKit/TidepoolService.git

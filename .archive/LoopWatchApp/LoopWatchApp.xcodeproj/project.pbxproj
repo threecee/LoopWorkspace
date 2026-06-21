@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2C0E00000000000040 /* OmniBLE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C0E00000000000041 /* OmniBLE.framework */; };
+		B2C0E00000000000042 /* OmniBLE.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2C0E00000000000041 /* OmniBLE.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C33D3D612F97F5D600305897 /* LoopWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C33D3D602F97F5D600305897 /* LoopWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C33D3D822F97F88200305897 /* G7SensorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D812F97F88200305897 /* G7SensorKit.framework */; };
+		C33D3D832F97F88200305897 /* G7SensorKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D812F97F88200305897 /* G7SensorKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C33D3D862F97F88C00305897 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D852F97F88C00305897 /* LoopKit.framework */; };
+		C33D3D872F97F88C00305897 /* LoopKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C33D3D852F97F88C00305897 /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C33D3D622F97F5D600305897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C33D3D542F97F5D600305897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C33D3D5F2F97F5D600305897;
+			remoteInfo = "LoopWatchApp Watch App";
+		};
+		D100000000000000000000A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C33D3D542F97F5D600305897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C33D3D5F2F97F5D600305897;
+			remoteInfo = "LoopWatchApp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C33D3D702F97F5D600305897 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C33D3D612F97F5D600305897 /* LoopWatchApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D3D842F97F88200305897 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C33D3D832F97F88200305897 /* G7SensorKit.framework in Embed Frameworks */,
+				C33D3D872F97F88C00305897 /* LoopKit.framework in Embed Frameworks */,
+				B2C0E00000000000042 /* OmniBLE.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B2C0E00000000000041 /* OmniBLE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OmniBLE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D3D5A2F97F5D600305897 /* LoopWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoopWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D3D602F97F5D600305897 /* LoopWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoopWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D3D812F97F88200305897 /* G7SensorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = G7SensorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D3D852F97F88C00305897 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D100000000000000000000B1 /* LoopWatchApp Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoopWatchApp Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C33D3D762F97F69900305897 /* Exceptions for "LoopWatchApp Watch App" folder in "LoopWatchApp Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"LoopWatchApp-Watch-App-Info.plist",
+			);
+			target = C33D3D5F2F97F5D600305897 /* LoopWatchApp Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C33D3D642F97F5D600305897 /* LoopWatchApp Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C33D3D762F97F69900305897 /* Exceptions for "LoopWatchApp Watch App" folder in "LoopWatchApp Watch App" target */,
+			);
+			path = "LoopWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		D100000000000000000000C1 /* LoopWatchApp Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "LoopWatchApp Watch AppTests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C33D3D5D2F97F5D600305897 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33D3D822F97F88200305897 /* G7SensorKit.framework in Frameworks */,
+				C33D3D862F97F88C00305897 /* LoopKit.framework in Frameworks */,
+				B2C0E00000000000040 /* OmniBLE.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D100000000000000000000D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C33D3D532F97F5D600305897 = {
+			isa = PBXGroup;
+			children = (
+				C33D3D642F97F5D600305897 /* LoopWatchApp Watch App */,
+				D100000000000000000000C1 /* LoopWatchApp Watch AppTests */,
+				C33D3D802F97F88200305897 /* Frameworks */,
+				C33D3D5B2F97F5D600305897 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C33D3D5B2F97F5D600305897 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C33D3D5A2F97F5D600305897 /* LoopWatchApp.app */,
+				C33D3D602F97F5D600305897 /* LoopWatchApp Watch App.app */,
+				D100000000000000000000B1 /* LoopWatchApp Watch AppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C33D3D802F97F88200305897 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C33D3D852F97F88C00305897 /* LoopKit.framework */,
+				C33D3D812F97F88200305897 /* G7SensorKit.framework */,
+				B2C0E00000000000041 /* OmniBLE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C33D3D592F97F5D600305897 /* LoopWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C33D3D712F97F5D600305897 /* Build configuration list for PBXNativeTarget "LoopWatchApp" */;
+			buildPhases = (
+				C33D3D582F97F5D600305897 /* Resources */,
+				C33D3D702F97F5D600305897 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C33D3D632F97F5D600305897 /* PBXTargetDependency */,
+			);
+			name = LoopWatchApp;
+			packageProductDependencies = (
+			);
+			productName = LoopWatchApp;
+			productReference = C33D3D5A2F97F5D600305897 /* LoopWatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		C33D3D5F2F97F5D600305897 /* LoopWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C33D3D6D2F97F5D600305897 /* Build configuration list for PBXNativeTarget "LoopWatchApp Watch App" */;
+			buildPhases = (
+				C33D3D5C2F97F5D600305897 /* Sources */,
+				C33D3D5D2F97F5D600305897 /* Frameworks */,
+				C33D3D5E2F97F5D600305897 /* Resources */,
+				C33D3D842F97F88200305897 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C33D3D642F97F5D600305897 /* LoopWatchApp Watch App */,
+			);
+			name = "LoopWatchApp Watch App";
+			packageProductDependencies = (
+			);
+			productName = "LoopWatchApp Watch App";
+			productReference = C33D3D602F97F5D600305897 /* LoopWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D100000000000000000000F1 /* LoopWatchApp Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D100000000000000000001A1 /* Build configuration list for PBXNativeTarget "LoopWatchApp Watch AppTests" */;
+			buildPhases = (
+				D100000000000000000000E1 /* Sources */,
+				D100000000000000000000D1 /* Frameworks */,
+				D100000000000000000000E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D100000000000000000001B1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D100000000000000000000C1 /* LoopWatchApp Watch AppTests */,
+			);
+			name = "LoopWatchApp Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "LoopWatchApp Watch AppTests";
+			productReference = D100000000000000000000B1 /* LoopWatchApp Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C33D3D542F97F5D600305897 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					C33D3D592F97F5D600305897 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+					C33D3D5F2F97F5D600305897 = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C33D3D572F97F5D600305897 /* Build configuration list for PBXProject "LoopWatchApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C33D3D532F97F5D600305897;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C33D3D5B2F97F5D600305897 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C33D3D592F97F5D600305897 /* LoopWatchApp */,
+				C33D3D5F2F97F5D600305897 /* LoopWatchApp Watch App */,
+				D100000000000000000000F1 /* LoopWatchApp Watch AppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C33D3D582F97F5D600305897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C33D3D5E2F97F5D600305897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D100000000000000000000E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C33D3D5C2F97F5D600305897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D100000000000000000000E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C33D3D632F97F5D600305897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C33D3D5F2F97F5D600305897 /* LoopWatchApp Watch App */;
+			targetProxy = C33D3D622F97F5D600305897 /* PBXContainerItemProxy */;
+		};
+		D100000000000000000001B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C33D3D5F2F97F5D600305897 /* LoopWatchApp Watch App */;
+			targetProxy = D100000000000000000000A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C33D3D6B2F97F5D600305897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C33D3D6C2F97F5D600305897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C33D3D6E2F97F5D600305897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "LoopWatchApp Watch App/LoopWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LoopWatchApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = LoopWatchApp;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "LoopWatch uses Bluetooth to receive glucose readings from your Dexcom G7 sensor.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LoopWatch reads your diabetes data (glucose, insulin, carbs) and the health metrics your Apple Watch tracks (heart rate, sleep, activity, workouts) so you and your caregivers can monitor your overall health alongside your loop.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LoopWatch writes glucose readings from your Dexcom G7 sensor, insulin doses commanded from the watch, and carb entries you log on the watch to HealthKit.";
+				INFOPLIST_KEY_UIBackgroundModes = "bluetooth-central";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.threecee.loop.LoopWatchApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Debug;
+		};
+		C33D3D6F2F97F5D600305897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "LoopWatchApp Watch App/LoopWatchApp Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LoopWatchApp-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = LoopWatchApp;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "LoopWatch uses Bluetooth to receive glucose readings from your Dexcom G7 sensor.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "LoopWatch reads your diabetes data (glucose, insulin, carbs) and the health metrics your Apple Watch tracks (heart rate, sleep, activity, workouts) so you and your caregivers can monitor your overall health alongside your loop.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "LoopWatch writes glucose readings from your Dexcom G7 sensor, insulin doses commanded from the watch, and carb entries you log on the watch to HealthKit.";
+				INFOPLIST_KEY_UIBackgroundModes = "bluetooth-central";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.threecee.loop.LoopWatchApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Release;
+		};
+		C33D3D722F97F5D600305897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				INFOPLIST_KEY_CFBundleDisplayName = LoopWatchApp;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.threecee.loop.LoopWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C33D3D732F97F5D600305897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				INFOPLIST_KEY_CFBundleDisplayName = LoopWatchApp;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.threecee.loop.LoopWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D100000000000000000001C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.threecee.loop.LoopWatchApp.watchkitapp.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoopWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LoopWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Debug;
+		};
+		D100000000000000000001C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PP9XFCVNT9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.threecee.loop.LoopWatchApp.watchkitapp.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoopWatchApp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LoopWatchApp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C33D3D572F97F5D600305897 /* Build configuration list for PBXProject "LoopWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D3D6B2F97F5D600305897 /* Debug */,
+				C33D3D6C2F97F5D600305897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C33D3D6D2F97F5D600305897 /* Build configuration list for PBXNativeTarget "LoopWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D3D6E2F97F5D600305897 /* Debug */,
+				C33D3D6F2F97F5D600305897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C33D3D712F97F5D600305897 /* Build configuration list for PBXNativeTarget "LoopWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C33D3D722F97F5D600305897 /* Debug */,
+				C33D3D732F97F5D600305897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D100000000000000000001A1 /* Build configuration list for PBXNativeTarget "LoopWatchApp Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D100000000000000000001C1 /* Debug */,
+				D100000000000000000001C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C33D3D542F97F5D600305897 /* Project object */;
+}

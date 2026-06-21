@@ -1,7 +1,10 @@
 #include? "../../LoopConfigOverride.xcconfig"
 
-// Override this if you don't want the default com.${DEVELOPMENT_TEAM}.loopkit that loop uses
-// MAIN_APP_BUNDLE_IDENTIFIER = com.myname.loop
+// Override this if you don't want the default com.${DEVELOPMENT_TEAM}.loopkit that loop uses.
+// Set to a concrete value so the App Group identifier (group.${MAIN_APP_BUNDLE_IDENTIFIER}.LoopGroup)
+// resolves to a real string for sim builds where DEVELOPMENT_TEAM is empty. Matches the App
+// Group declared by LoopWatchApp's entitlements (group.com.threecee.loop.LoopGroup).
+MAIN_APP_BUNDLE_IDENTIFIER = com.threecee.loop
 
 // Customize this to change the app name displayed
 //MAIN_APP_DISPLAY_NAME = Loop
@@ -13,4 +16,4 @@
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) EXPERIMENTAL_FEATURES_ENABLED SIMULATORS_ENABLED ALLOW_ALGORITHM_EXPERIMENTS DEBUG_FEATURES_ENABLED
 
 // Put your team id here for signing
-//LOOP_DEVELOPMENT_TEAM = UY678SP37Q
+LOOP_DEVELOPMENT_TEAM = 8YPHY526TJ

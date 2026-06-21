@@ -27,3 +27,12 @@ xcuserdata/
 *.playground
 playground.xcworkspace
 timeline.xctimeline
+.b1-*.txt
+
+## Release artifacts (D.1b)
+build/
+*.xcarchive
+
+## Claude Code session state
+.claude/
+
